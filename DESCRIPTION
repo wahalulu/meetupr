@@ -1,0 +1,16 @@
+Package: meetupr
+Type: Package
+Title: Downloads data from meetup.com API
+Version: 0.1
+Date: 2015-10-25
+Author: Marck Vaisman
+Maintainer: Marck Vaisman <marck@vaisman.us>
+Description: Pulls data from meetup.com
+License: MIT
+Depends:
+    httr,
+    jsonlite,
+    dplyr,
+    tidyr,
+    lubridate
+RoxygenNote: 5.0.0
