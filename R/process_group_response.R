@@ -6,11 +6,11 @@
 
 process_group_response <- function(grl) { #grl is group_response_list
 
-  events <- extract_result_dataframe_from_response_list(grl$events)
-  profiles <- extract_result_dataframe_from_response_list(grl$profiles)
-  members <- extract_result_dataframe_from_response_list(grl$members)
-  rsvps <- extract_result_dataframe_from_response_list(grl$rsvps)
-  group <- extract_result_dataframe_from_response_list(grl$group) %>%
+  events <- extract_result_dataframe(grl$events)
+  profiles <- extract_result_dataframe(grl$profiles)
+  members <- extract_result_dataframe(grl$members)
+  rsvps <- extract_result_dataframe(grl$rsvps)
+  group <- extract_result_dataframe(grl$group) %>%
     rename(url_name = urlname) %>%
     mutate(created = get_real_time(created),
            url_name = tolower(url_name))
